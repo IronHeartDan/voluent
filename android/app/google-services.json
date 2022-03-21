@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1013362640637",
+    "project_id": "voluentie",
+    "storage_bucket": "voluentie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013362640637:android:6c161020c1f6cfc49d6094",
+        "android_client_info": {
+          "package_name": "com.zdem.voluentie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013362640637-lur635j1a9alt9p684s3lpov4rokq2es.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zdem.voluentie",
+            "certificate_hash": "d877fe107435c2a0a5bceb8e71a1366750802007"
+          }
+        },
+        {
+          "client_id": "1013362640637-6aittvir7bbtdqfmfe9f2q109v5iqotr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6fY4EqdWjdKIhI3kCh2Ks2UktC_nuYog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013362640637-6aittvir7bbtdqfmfe9f2q109v5iqotr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

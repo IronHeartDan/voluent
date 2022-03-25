@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -6,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:voluentie/Screens/survey_screen.dart';
-import 'package:voluentie/Widgets/bottom_clip.dart';
 import 'package:voluentie/Widgets/drawer.dart';
+import 'package:voluentie/Widgets/wave_clip.dart';
 
 import '../Widgets/top_clip.dart';
 
@@ -33,11 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              Positioned(
+              Positioned.fill(
                   top: 120,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
                   child: GridView.count(
                     crossAxisCount: 2,
                     crossAxisSpacing: 5,
@@ -57,6 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 120,
                                   decoration: BoxDecoration(
                                       color: HexColor("83E753"),
+                                      boxShadow: const [
+                                        BoxShadow(
+                                            color: Colors.black, blurRadius: 1)
+                                      ],
                                       borderRadius: const BorderRadius.all(
                                           Radius.circular(70))),
                                   child: Center(
@@ -79,13 +79,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: 120,
                                 decoration: BoxDecoration(
                                     color: HexColor("C4C4C4"),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                          color: Colors.black, blurRadius: 1)
+                                    ],
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(70))),
                                 child: Center(
                                   child: Text(
                                     "Activity",
                                     style: GoogleFonts.poppins(
-                                        fontSize: 24, color: HexColor("9A9A9A")),
+                                        fontSize: 24,
+                                        color: HexColor("9A9A9A")),
                                   ),
                                 ),
                               ),
@@ -101,13 +106,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: 120,
                                 decoration: BoxDecoration(
                                     color: HexColor("C4C4C4"),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                          color: Colors.black, blurRadius: 1)
+                                    ],
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(70))),
                                 child: Center(
                                   child: Text(
                                     "Activity",
                                     style: GoogleFonts.poppins(
-                                        fontSize: 24, color: HexColor("9A9A9A")),
+                                        fontSize: 24,
+                                        color: HexColor("9A9A9A")),
                                   ),
                                 ),
                               ),
@@ -123,13 +133,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: 120,
                                 decoration: BoxDecoration(
                                     color: HexColor("C4C4C4"),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                          color: Colors.black, blurRadius: 1)
+                                    ],
                                     borderRadius: const BorderRadius.all(
                                         Radius.circular(70))),
                                 child: Center(
                                   child: Text(
                                     "Activity",
                                     style: GoogleFonts.poppins(
-                                        fontSize: 24, color: HexColor("9A9A9A")),
+                                        fontSize: 24,
+                                        color: HexColor("9A9A9A")),
                                   ),
                                 ),
                               ),
@@ -137,22 +152,34 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   )),
+
               Positioned(
-                  top: 0,
-                  child: ClipPath(
-                    clipper: BottomClip(),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: 400,
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              transform: const GradientRotation(pi / 4),
-                              colors: [
-                            HexColor("705DEE"),
-                            HexColor("FFC3A0"),
-                          ])),
-                    ),
-                  )),
+                top: 0,
+                child: CustomPaint(
+                  size: Size(
+                      MediaQuery.of(context).size.width,
+                      (MediaQuery.of(context).size.width * 0.42028985507246375)
+                          .toDouble()),
+                  painter: WaveClip(),
+                ),
+              ),
+
+              // Positioned(
+              //     top: 0,
+              //     child: ClipPath(
+              //       clipper: BottomClip(),
+              //       child: Container(
+              //         width: MediaQuery.of(context).size.width,
+              //         height: 400,
+              //         decoration: BoxDecoration(
+              //             gradient: LinearGradient(
+              //                 transform: const GradientRotation(pi / 4),
+              //                 colors: [
+              //               HexColor("705DEE"),
+              //               HexColor("FFC3A0"),
+              //             ])),
+              //       ),
+              //     )),
               Positioned(
                 top: 0,
                 child: ClipPath(

@@ -27,7 +27,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.only(top: 50),
+                margin: const EdgeInsets.only(top: 25),
                 width: 150,
                 height: 150,
                 decoration: const BoxDecoration(
@@ -83,7 +83,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 child: Container(
                   margin: const EdgeInsets.only(right: 30),
                   width: double.infinity,
-                  height: 65,
+                  height: 60,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(colors: [
                         HexColor("D4FC79"),
